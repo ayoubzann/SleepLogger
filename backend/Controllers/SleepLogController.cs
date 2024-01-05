@@ -7,9 +7,16 @@ namespace backend.Controllers;
 public class SleepLogController : ControllerBase
 {
 
- [HttpGet]
- public IActionResult GetOneLog(){
-    return Ok();
- }   
- 
+    [HttpGet("/getLogs")]
+    public ActionResult<string> GetOneLog()
+    {
+        return Ok("One sleep log");
+    }
+
+    [HttpGet("/getAllLogs")]
+    public ActionResult<string> GetAllLogs()
+    {
+        return Ok("All sleep logs");
+    }
+
 }
