@@ -4,9 +4,12 @@ public class SleepLoggerServices : ISleepLoggerServices
 
     private static List<SleepLog> sleepLogs = new();
 
-    public void AddSleepLog(SleepLogReceiver sleepLogReceiver)
+    public SleepLog AddSleepLog(SleepLogReceiver sleepLogReceiver)
     {
-        throw new NotImplementedException();
+        SleepLog sleepLog = new SleepLog(sleepLogReceiver);
+        sleepLogs.Add(sleepLog);
+
+        return sleepLog;
     }
 
     public IEnumerable<SleepLog> GetAllSleepLogs()

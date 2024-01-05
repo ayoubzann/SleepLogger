@@ -27,7 +27,7 @@ public class SleepLogController : ControllerBase
     [HttpPost("/addSleepLogs")]
     public async Task<ActionResult<SleepLogReceiver>> PostSleepLog()
     {
-        sleepLogs.Add(s)
+        
     }
 
 }
