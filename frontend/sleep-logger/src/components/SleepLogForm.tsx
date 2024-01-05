@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, ChangeEvent, FormEvent } from 'react'
 
 type SleepLogFormProps = {
     onSubmit: (duration: number, bedTime: string, wakeTime: string, restfullnessScale: number) => void;
@@ -11,24 +11,24 @@ type SleepLogFormProps = {
     const [wakeTime, setWakeTime] = useState("");
     const [restfullnessScale, setRestfullnessScale] = useState(0);
 
-    const handleDurationChange = (event) => {
+    const handleDurationChange = (event: ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         setDuration(event.target.value);
     }
-    const handleBedtimeChange = (event) => {
+    const handleBedtimeChange = (event: ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         setBedTime(event.target.value);
     }
-    const handleWakeTimeChange = (event) => {
+    const handleWakeTimeChange = (event: ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         setWakeTime(event.target.value);
     }
-    const handleRestfullnessScaleChange = (event) => {
+    const handleRestfullnessScaleChange = (event: ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         setRestfullnessScale(event.target.value);
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
         onSubmit(duration, bedTime, wakeTime, restfullnessScale);
     }
