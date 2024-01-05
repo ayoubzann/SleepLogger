@@ -43,24 +43,24 @@ const SleepLogForm: React.FC<SleepLogFormProps> = ({ onSubmit }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Duration
+      <form className='flex flex-col' onSubmit={handleSubmit}>
+        <label className='p-5'>
+          Duration<br/>
           <input type="number" className='text-black' onChange={handleDurationChange} value={duration} />
         </label>
-        <label>
-          Bedtime
+        <label className='p-5'>
+          Bedtime<br/>
           <input type="text" className='text-black' onChange={handleBedtimeChange} value={bedTime} />
         </label>
-        <label>
-          Waketime
+        <label className='p-5'>
+          Waketime<br/>
           <input type="text" className='text-black' onChange={handleWakeTimeChange} value={wakeTime} />
         </label>
-        <label>
-          Restfullness scale 1-10
+        <label className='p-5'>
+          Restfullness scale 1-10<br/>
           <input type="number" className='text-black' onChange={handleRestfullnessScaleChange} value={restfullnessScale} />
         </label>
-        <button className='border-solid border-sky-500' type='submit'> Submit sleep log </button>
+        <button className='border border-solid border-purple-700 bg-purple-700 rounded-lg p-5' type='submit'> Submit sleep log </button>
       </form>
     </div>
   );

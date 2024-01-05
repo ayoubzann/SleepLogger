@@ -8,7 +8,7 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col flex-start items-center align-middle justify-between p-24">
       Hello!
       <SleepLogPage />
     </main>

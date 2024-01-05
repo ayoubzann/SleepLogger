@@ -1,5 +1,6 @@
 import React from "react";
 import SleepLogForm from "./SleepLogForm";
+import FetchApi from "./FetchApi";
 
 interface SleepLogPageProps {}
 
@@ -36,6 +37,7 @@ const SleepLogPage: React.FC<SleepLogPageProps> = () => {
   return (
     <div>
       <SleepLogForm onSubmit={handleSubmit} />
+      <FetchApi/>
     </div>
   );
 };
