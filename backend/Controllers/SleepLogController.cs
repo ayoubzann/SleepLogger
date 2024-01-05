@@ -7,7 +7,17 @@ namespace backend.Controllers;
 public class SleepLogController : ControllerBase
 {
 
-    public static List<SleepLog> sleepLogs = new();
+    SleepLoggerServices _repo = new();
+
+
+    [HttpPost("/addSleepLogs")]
+    public ActionResult<SleepLog> PostSleepLog(SleepLogReceiver received)
+    {
+        var response = _repo.AddSleepLog(received);
+
+        return Ok(response);
+        
+    }
 
     [HttpGet("/getLogs")]
     public ActionResult<string> GetOneLog()
@@ -19,15 +29,10 @@ public class SleepLogController : ControllerBase
     }
 
     [HttpGet("/getAllLogs")]
-    public ActionResult<string> GetAllLogs()
+    public ActionResult<List<SleepLog>> GetAllLogs()
     {
-        return Ok("All sleep logs");
-    }
-
-    [HttpPost("/addSleepLogs")]
-    public async Task<ActionResult<SleepLogReceiver>> PostSleepLog()
-    {
-        
+        var result = _repo.GetAllSleepLogs();
+        return Ok(result);
     }
 
 }

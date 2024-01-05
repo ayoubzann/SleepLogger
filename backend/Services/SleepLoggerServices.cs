@@ -14,7 +14,7 @@ public class SleepLoggerServices : ISleepLoggerServices
 
     public IEnumerable<SleepLog> GetAllSleepLogs()
     {
-        throw new NotImplementedException();
+        return sleepLogs;
     }
 
     public SleepLog GetSleepLogById()
