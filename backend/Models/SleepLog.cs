@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 public class SleepLog
 {
+    public string Id {get;} = Guid.NewGuid().ToString();
     [Required]
     public double Duration { get; set; }
     [Required]
