@@ -26,4 +26,4 @@ app.MapControllers();
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 var url = $"http://0.0.0.0:{port}";
 
-app.Run();
+app.Run(url);
