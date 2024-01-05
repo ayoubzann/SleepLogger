@@ -7,6 +7,8 @@ namespace backend.Controllers;
 public class SleepLogController : ControllerBase
 {
 
+    public static List<SleepLog> sleepLogs = new();
+
     [HttpGet("/getLogs")]
     public ActionResult<string> GetOneLog()
     {
@@ -20,6 +22,12 @@ public class SleepLogController : ControllerBase
     public ActionResult<string> GetAllLogs()
     {
         return Ok("All sleep logs");
+    }
+
+    [HttpPost("/addSleepLogs")]
+    public async Task<ActionResult<SleepLogReceiver>> PostSleepLog()
+    {
+        sleepLogs.Add(s)
     }
 
 }

@@ -6,7 +6,7 @@ const FetchApi = () => {
   const [apiRes, setApiRes] = useState();
 
   const fetchData = async () => {
-    const response = await fetch("http://localhost:5206/getLogs");
+    const response = await fetch("https://sleeplogger-e3uzzxqbva-lz.a.run.app/getLogs");
     const data = await response.json();
 
     console.log(data);

@@ -2,7 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 public class SleepLogReceiver
 {
-    public string Id { get; } = Guid.NewGuid().ToString();
 
     [Required(ErrorMessage = "In order for us to log accurately, we need to know how long you slept. An estimate is alright!")]
     public double Duration { get; set; }
