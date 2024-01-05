@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "f5dnOlTrQUSPnkRY7NpI9rxc2NR2r1kMKPWWD5GOihrCJrR9MRdCNyNoD/m4cItlWCyPHMyd41p0NAsj0jxwkA==",
+  "success": true,
+  "projectFilePath": "/Users/ayoubzannachi/lab/Week 8/SleepLogger/SleepLogger/backend/backend.csproj",
+  "expectedPackageFiles": [
+    "/Users/ayoubzannachi/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/ayoubzannachi/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/ayoubzannachi/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/Users/ayoubzannachi/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/Users/ayoubzannachi/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/Users/ayoubzannachi/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
