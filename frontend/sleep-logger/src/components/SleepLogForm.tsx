@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 
-const SleepLogForm = ({onSubmit}) => {
+type SleepLogFormProps = {
+    onSubmit: (duration: number, bedTime: string, wakeTime: string, restfullnessScale: number) => void;
+  };
+
+  const SleepLogForm: React.FC<SleepLogFormProps> = ({ onSubmit }) => {
 
     const [duration, setDuration] = useState(0);
     const [bedTime, setBedTime] = useState("");
