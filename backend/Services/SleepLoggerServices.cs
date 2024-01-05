@@ -17,8 +17,12 @@ public class SleepLoggerServices : ISleepLoggerServices
         return sleepLogs;
     }
 
-    public SleepLog GetSleepLogById()
+    public SleepLogResponse GetSleepLogById(string id)
     {
-        throw new NotImplementedException();
+        var log = sleepLogs.FirstOrDefault(j => j.Id == id);
+
+        SleepLogResponse response = new SleepLogResponse(log);
+
+        return response;
     }
 }

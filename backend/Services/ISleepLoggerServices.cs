@@ -1,6 +1,6 @@
 public interface ISleepLoggerServices
 {
     IEnumerable<SleepLog> GetAllSleepLogs();
-    SleepLog GetSleepLogById();
+    SleepLogResponse GetSleepLogById(string id);
     SleepLog AddSleepLog(SleepLogReceiver receiver);
 }

@@ -20,12 +20,12 @@ public class SleepLogController : ControllerBase
     }
 
     [HttpGet("/getLogs")]
-    public ActionResult<string> GetOneLog()
+    public ActionResult<SleepLogResponse> GetOneLog(string id)
     {
+        var response = _repo.GetSleepLogById(id);
 
-        Bs newBs = new(){BsLine = "Blabla"};
-
-        return Ok(newBs);
+        return Ok(response);
+        
     }
 
     [HttpGet("/getAllLogs")]
@@ -37,7 +37,3 @@ public class SleepLogController : ControllerBase
 
 }
 
-public class Bs
-{
-    public string BsLine {get; set;}
-}
