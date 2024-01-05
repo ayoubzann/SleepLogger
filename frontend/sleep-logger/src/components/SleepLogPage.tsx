@@ -1,9 +1,15 @@
 import React from "react";
 import SleepLogForm from "./SleepLogForm";
 
-const SleepLogPage = () => {
-    
-  const postSleepLog = (duration, bedTime, wakeTime, restfullnessScale) => {
+interface SleepLogPageProps {}
+
+const SleepLogPage: React.FC<SleepLogPageProps> = () => {
+  const postSleepLog = (
+    duration: number,
+    bedTime: string,
+    wakeTime: string,
+    restfullnessScale: number
+  ) => {
     fetch("https://sleeplogger-e3uzzxqbva-lz.a.run.app/addSleepLogs", {
       method: "POST",
       body: JSON.stringify({
@@ -18,14 +24,20 @@ const SleepLogPage = () => {
     });
   };
 
-  const handleSubmit = ( duration, bedTime, wakeTime, restfullnessScale) => {
+  const handleSubmit = (
+    duration: number,
+    bedTime: string,
+    wakeTime: string,
+    restfullnessScale: number
+  ) => {
     postSleepLog(duration, bedTime, wakeTime, restfullnessScale);
   };
 
-  return(
-  <div>
-    <SleepLogForm onSubmit={handleSubmit} />
-  </div>);
+  return (
+    <div>
+      <SleepLogForm onSubmit={handleSubmit} />
+    </div>
+  );
 };
 
 export default SleepLogPage;
