@@ -10,7 +10,10 @@ public class SleepLogController : ControllerBase
     [HttpGet("/getLogs")]
     public ActionResult<string> GetOneLog()
     {
-        return Ok("One sleep log");
+
+        Bs newBs = new(){BsLine = "Blabla"};
+
+        return Ok(newBs);
     }
 
     [HttpGet("/getAllLogs")]
@@ -19,4 +22,9 @@ public class SleepLogController : ControllerBase
         return Ok("All sleep logs");
     }
 
+}
+
+public class Bs
+{
+    public string BsLine {get; set;}
 }
